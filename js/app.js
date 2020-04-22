@@ -15,7 +15,7 @@ function fetchData(url) {
 
 Promise.all([
   fetchData('https://dog.ceo/api/breeds/list'),
-  fetchData('https://dog.ceo/api/breeds/image/random')  
+  fetchData('https://aws.random.cat/meow')  
 ])
 .then(data => {
   const breedList = data[0].message;
@@ -85,6 +85,7 @@ function postData(e) {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
+      'x-api-key': 'b3b6a994-9a11-48d1-8a27-11b3df04b128'
     },
     body: JSON.stringify({ name, comment }) 
   }
